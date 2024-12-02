@@ -32,3 +32,18 @@ accordingly.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+## Analysis 
+
+The `augmentingPath` function uses the Breadth-First Search (BFS) algorithm to find a path in a graph represented by an adjacency list. The graph has \( n \) nodes (vertices) and \( E \) edges. In the worst case, BFS visits each node exactly once, resulting in a runtime of \( O(n) \). Additionally, it explores all edges connected to the visited nodes, which takes \( O(E) \). Therefore, the overall runtime complexity of the algorithm is:
+
+$$
+\Theta(n + E)
+$$
+
+This runtime is optimal for BFS, as it efficiently traverses the graph without redundant operations. The function performs well on both sparse and dense graphs, provided the graph is connected or has reachable nodes from the starting point.
+
+
+## Sources  
+
+For this I started with what was discussed in class and the video provided for the Ford-Fulkerson Algorithm. I then looked it up on geeks for geeks. https://www.geeksforgeeks.org/ford-fulkerson-algorithm-for-maximum-flow-problem/ that is where I got the idea to use the BFS or Breadth- First search. I looked that up on geeks for geeks https://www.geeksforgeeks.org/breadth-first-search-or-bfs-for-a-graph/ .  The paths are maintained in the queue. This helped with the runtime analysis. 
